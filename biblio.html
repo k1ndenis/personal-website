@@ -1,0 +1,3176 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Библиотека</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+            crossorigin="anonymous"
+        />
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+            <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+            <link rel="manifest" href="/site.webmanifest">
+		<link rel="stylesheet" href="./src/biblio.css">
+    </head>
+        <body>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <nav class="container navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="./index.html"><img src="./src/pictures/logo.png" alt="Logo" width="60"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./index.html">Главная<span class="sr-only"></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./biblio.html">Библиотека</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacts.html">Контакты</a>
+                        </li>
+                        </ul>
+                    </div>
+                </nav>
+            </nav>
+						<div id="overlay">
+							<div class="box">
+								<span class="close" id="close">&times;</span>
+								<img id="overlay-img" src="" alt="Увеличенное изображение">
+							</div>
+						</div>
+            <div class="container text-center fw-light my-3">
+                <h1 class="my-4 fw-light">Мои прочитанные книги</h1>
+            </div>
+						<div class="container my-2 text-center">
+  						<input type="text" id="search-input" class="form-control" placeholder="Поиск книги или автора..." >
+						</div>
+						<div id="random-card-app" class="container text-center my-5">
+							<div class="btn-group">
+								<button id="random-btn" class="btn-random">Показать случайную книгу</button>
+								<button id="hide-btn" class="btn-hide" style="display:none;">Скрыть</button>
+							</div>
+							<div id="random-result" class="my-4"></div>
+						</div>
+						<div class="year-links container text-center fw-light my-5">
+							<a href="#2025">2025</a>
+							<a href="#2024">2024</a>
+							<a href="#2023">2023</a>
+							<a href="#2022">2022</a>
+							<a href="#2021">2021</a>
+							<a href="#2020">2020</a>
+						</div>
+            <div id="2025" class="container text-center fw-light my-3">
+                <h2 class="my-2 fw-light text-muted">2025</h2>
+            </div>
+            <div class="container text-center my-5">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-5">
+                                            <div class="col">
+													<div class="card">
+															<img class="card-img-top" src="./src/pictures/books/compressed/vi-ne-znaete-js-zamikaniya.jpg" alt="Card image cap">
+																	<div class="card-body">
+																			<h5 class="card-title">{Вы не знаете JS} Замыкания и объекты</h5>
+																			<p class="card-text">Кайл Симпсон</p>
+																			<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/vi-ne-znaete-js-zamikaniya.jpg">Увеличить</a>
+																	</div>
+													</div>
+											</div>
+											<div class="col">
+													<div class="card">
+															<img class="card-img-top" src="./src/pictures/books/compressed/vi-ne-znaete-js-tipi.jpg" alt="Card image cap">
+																	<div class="card-body">
+																			<h5 class="card-title">{Вы не знаете JS} Типы и грамматические конструкции</h5>
+																			<p class="card-text">Кайл Симпсон</p>
+																			<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/vi-ne-znaete-js-tipi.jpg">Увеличить</a>
+																	</div>
+													</div>
+											</div>
+											<div class="col">
+													<div class="card">
+															<img class="card-img-top" src="./src/pictures/books/compressed/essentializm.jpg" alt="Card image cap">
+																	<div class="card-body">
+																			<h5 class="card-title">Эссенциализм. Путь к простоте</h5>
+																			<p class="card-text">Грег МакКеон</p>
+																			<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/essentializm.jpg">Увеличить</a>
+																	</div>
+													</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/grokaem.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Грокаем алгоритмы</h5>
+																				<p class="card-text">Адитья Бхаргава</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/grokaem.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/strah-i-otvrashenie.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Страх и отвращение в Лас-Вегасе: Дикое путешествие в Сердце Американской Мечты</h5>
+																				<p class="card-text">Хантер С. Томпсон</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/strah-i-otvrashenie.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/slovo-zhivoe-i-mertvoe.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Слово живое и мёртвое</h5>
+																				<p class="card-text">Нора Галь</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/slovo-zhivoe-i-mertvoe.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/saharniy-kreml.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Сахарный кремль</h5>
+																				<p class="card-text">Владимир Сорокин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/saharniy-kreml.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/krasota-i-uzhas.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Красота и ужас: правдивая история итальянского Возрождения</h5>
+																				<p class="card-text">Кэтрин Флетчер</p>
+																			  <a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/krasota-i-uzhas.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/amerikanskie-bogi.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Американские боги</h5>
+																				<p class="card-text">Нил Гейман</p>
+																			  <a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/amerikanskie-bogi.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/golova-professora-douelya.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Голова профессора Доуэля</h5>
+																				<p class="card-text">Александр Беляев</p>
+																			  <a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/golova-professora-douelya.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/imperia-angelov.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Империя ангелов</h5>
+																				<p class="card-text">Бернар Вербер</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/imperia-angelov.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/tanatonavti.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Танатонавты</h5>
+																				<p class="card-text">Бернар Вербер</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/tanatonavti.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/skotniy-dvor.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Скотный двор</h5>
+																				<p class="card-text">Джордж Оруэлл</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/skotniy-dvor.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/tri-mushketera.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Три мушкутёра</h5>
+																				<p class="card-text">Александр Дюма</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/tri-mushketera.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/1421-god-kogda-kitai-otkril-mir.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">1421 - год, когда Китай открыл мир</h5>
+																				<p class="card-text">Гевин Мензис</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/1421-god-kogda-kitai-otkril-mir.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/hakeri-snovideniy.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Хакеры сновидений</h5>
+																				<p class="card-text">Андрей Реутов</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/hakeri-snovideniy.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/mozg-protiv-mozga2.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Мозг против мозга. Часть 2</h5>
+																				<p class="card-text">Святослав Медведев</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/mozg-protiv-mozga2.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/mozg-protiv-mozga1.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Мозг против мозга. Часть 1</h5>
+																				<p class="card-text">Святослав Медведев</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/mozg-protiv-mozga1.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/sezon-groz.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Сезон гроз</h5>
+																				<p class="card-text">Анджей Сапковский</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/sezon-groz.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/vladichiza-ozera.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Владычица озера</h5>
+																				<p class="card-text">Анджей Сапковский</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/vladichiza-ozera.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/bashnya-lastochki.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Башня ласточки</h5>
+																				<p class="card-text">Анджей Сапковский</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/bashnya-lastochki.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/kreshenie-ognem.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Крещение огнём</h5>
+																				<p class="card-text">Анджей Сапковский</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/kreshenie-ognem.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/chas-prezrenia.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Час презрения</h5>
+																				<p class="card-text">Анджей Сапковский</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/chas-prezrenia.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/krov-elfov.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Кровь эльфов</h5>
+																				<p class="card-text">Анджей Сапковский</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/krov-elfov.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/mech-prednaznachenia.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Меч предназначения</h5>
+																				<p class="card-text">Анджей Сапковский</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/mech-prednaznachenia.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/poslednee-zhelanie.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Последнее желание</h5>
+																				<p class="card-text">Анджей Сапковский</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/poslednee-zhelanie.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/misli.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Мысли</h5>
+																				<p class="card-text">Артур Шопенгауэр</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/misli.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/apopheoz-bespochvennosti.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Апофеоз беспочвенности</h5>
+																				<p class="card-text">Лев Шестов</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/apopheoz-bespochvennosti.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/profil-ubiyci.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Профиль убийцы. Психологические аспекты криминального профайлинга</h5>
+																				<p class="card-text">Н. Дворянчиков, Д.Шипицын, С. Нечесова</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/profil-ubiyci.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/hleb-s-vetchinoy.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Хлеб с ветчиной</h5>
+																				<p class="card-text">Чарльз Буковски</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/hleb-s-vetchinoy.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/govorit-bezmolvie.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Говорит безмолвие</h5>
+																				<p class="card-text">Экхарт Толле</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/govorit-bezmolvie.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/razvivay-svoy-mozg.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Развивай свой мозг: как перенастроить разум и реализовать собственный потенциал</h5>
+																				<p class="card-text">Джо Диспенза</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/razvivay-svoy-mozg.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/legendi-i-miphi-drevney-grecii.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Легенды и мифы Древней Греции</h5>
+																				<p class="card-text">Николай Кун</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/legendi-i-miphi-drevney-grecii.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/sverhestestvenniy-razum.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Сверхъестественный разум. Как обычные люди делают невозможное с помощью силы подсознания</h5>
+																				<p class="card-text">Джо Диспенза</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/sverhestestvenniy-razum.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+										</div>
+							<div id="2024" class="container text-center fw-light my-5">
+								<h2 class="my-2 fw-light text-muted">2024</h2>
+							</div>
+								<div class="container text-center my-5">
+									<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-5">
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/iosif-i-ego-bratya.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Иосиф и его братья</h5>
+																				<p class="card-text">Томас Манн</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/iosif-i-ego-bratya.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/krut.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Круть</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/krut.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/tomas-mann.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Собрание сочинений в десяти томах</h5>
+																				<p class="card-text">Томас Манн</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/tomas-mann.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/tri-lyubvi-dostoevskogo.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Три любви Достоевского</h5>
+																				<p class="card-text">Марк Слоним</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/tri-lyubvi-dostoevskogo.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/domoy-vozvrata-net.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Домой возврата нет</h5>
+																				<p class="card-text">Томас Вулф</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/domoy-vozvrata-net.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/hlopok-odnoy-ladonyu.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Хлопок одной ладонью. Как неживая природа породила человеческий разум</h5>
+																				<p class="card-text">Николай Кукушкин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/hlopok-odnoy-ladonyu.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/psihologiya-lzhi.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Психология лжи. Обмани меня, если сможешь</h5>
+																				<p class="card-text">Пол Экман</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/psihologiya-lzhi.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/elektroprohladitelniy-kislotniy-test.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Электропрохладительный кислотный тест</h5>
+																				<p class="card-text">Том Вулф</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/elektroprohladitelniy-kislotniy-test.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/zhizn-vzaimi.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Жизнь взаймы, или У неба любимчиков нет</h5>
+																				<p class="card-text">Эрих Мария Ремарк</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/zhizn-vzaimi.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/dai-vam-bog-zdorovya.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Дай вам бог здоровья, мистер Розуотер, или Не мечите бисера перед свиньями</h5>
+																				<p class="card-text">Курт Воннегут</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/dai-vam-bog-zdorovya.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/zavtrak-dlya-chempionov.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Завтрак для чемпионов, или Прощай, черный понедельник</h5>
+																				<p class="card-text">Курт Воннегут</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/zavtrak-dlya-chempionov.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/boynya-nomer-pyat.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Бойня номер пять, или Крестовый поход детей</h5>
+																				<p class="card-text">Курт Воннегут</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/boynya-nomer-pyat.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/noch-v-lissabone.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Ночь в Лиссабоне</h5>
+																				<p class="card-text">Эрих Мария Ремарк</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/noch-v-lissabone.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/ubezhday-i-pobezhday.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Убеждай и побеждай: Секреты эффективной аргументации</h5>
+																				<p class="card-text">Никита Непряхин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/ubezhday-i-pobezhday.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/osoznannoe-snovidenie.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Осознанное сновидение. Проснитесь в своих снах и в своей жизни</h5>
+																				<p class="card-text">Стивен Лаберж</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/osoznannoe-snovidenie.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/dumay-kak-matematik.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Думай как математик: Как решать любые задачи быстрее и эффективнее</h5>
+																				<p class="card-text">Барбара Оакли</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/dumay-kak-matematik.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/na-doroge.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">На дороге</h5>
+																				<p class="card-text">Джек Керуак</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/na-doroge.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/istoriya-persidskoy-imperii.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">История Персидской империи</h5>
+																				<p class="card-text">Альберт Олмстед</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/istoriya-persidskoy-imperii.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/tarkovskiy.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Судьба моя сгорела между строк</h5>
+																				<p class="card-text">Арсений Тарковский</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/tarkovskiy.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/temnaya-bashnya.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Тёмная башня</h5>
+																				<p class="card-text">Стивен Кинг</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/temnaya-bashnya.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/pesn-suzanni.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Песнь Сюзанны</h5>
+																				<p class="card-text">Стивен Кинг</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/pesn-suzanni.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/volki-kali.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Волки Кальи</h5>
+																				<p class="card-text">Стивен Кинг</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/volki-kali.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/veter-skvoz.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Ветер сквозь замочную скважину</h5>
+																				<p class="card-text">Стивен Кинг</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/veter-skvoz.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/koldun-i-kristall.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Колдун и кристалл</h5>
+																				<p class="card-text">Стивен Кинг</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/koldun-i-kristall.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/besplodnie-zemli.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Бесплодные земли</h5>
+																				<p class="card-text">Стивен Кинг</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/besplodnie-zemli.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/izvlechenie-troih.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Извлечение троих</h5>
+																				<p class="card-text">Стивен Кинг</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/izvlechenie-troih.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/strelok.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Стрелок</h5>
+																				<p class="card-text">Стивен Кинг</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/strelok.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/sobor-parizhskoy-bogomateri.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Собор Парижской Богоматери</h5>
+																				<p class="card-text">Виктор Гюго</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/sobor-parizhskoy-bogomateri.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/car-itaki.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Царь Итаки</h5>
+																				<p class="card-text">Глин Айлиф</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/car-itaki.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/vkluchaem-obayanie-po-metodike-specsluzhb.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Включаем обаяние по методике спецслужб</h5>
+																				<p class="card-text">Джек Шафер и Марвин Карлинс</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/vkluchaem-obayanie-po-metodike-specsluzhb.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/lavr.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Лавр</h5>
+																				<p class="card-text">Евгений Водолазкин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/lavr.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/poymat-bolshuyu-ribu.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Поймать большую рыбу</h5>
+																				<p class="card-text">Дэвид Линч</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/poymat-bolshuyu-ribu.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/krolichya-nora.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Кроличья нора, или Что мы знаем о себе и Вселенной</h5>
+																				<p class="card-text">Уильям Арнту, Бетси Чейс, Марк Висенте</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/krolichya-nora.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/odisseya.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Одиссея</h5>
+																				<p class="card-text">Гомер</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/odisseya.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/kley.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Клей</h5>
+																				<p class="card-text">Ирвин Уэлш</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/kley.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/atlant-raspravil-plechi.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Атлант расправил плечи</h5>
+																				<p class="card-text">Айн Рэнд</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/atlant-raspravil-plechi.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/ponedelnik-nachinaetsya-v-subbotu.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Понедельник начинается в субботу</h5>
+																				<p class="card-text">Аркадий и Борис Стругацкие</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/ponedelnik-nachinaetsya-v-subbotu.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/netochka.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Неточка Незванова</h5>
+																				<p class="card-text">Фёдор Достоевский</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/netochka.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/belie-nochi.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Белые ночи</h5>
+																				<p class="card-text">Фёдор Достоевский</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/belie-nochi.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/bednie-lyudi.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Бедные люди</h5>
+																				<p class="card-text">Фёдор Достоевский</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/bednie-lyudi.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/pacient-osoboy-kliniki.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Пациент особой клиники</h5>
+																				<p class="card-text">Себастьян Фитцек</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/pacient-osoboy-kliniki.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/lavka-drevnostey.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Лавка древностей</h5>
+																				<p class="card-text">Чарльз Диккенс</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/lavka-drevnostey.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/zov-ktulhu.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Зов Ктулху</h5>
+																				<p class="card-text">Говард Филлипс Лавкрафт</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/zov-ktulhu.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/hrebti-bezumiya.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Хребты безумия</h5>
+																				<p class="card-text">Говард Филлипс Лавкрафт</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/hrebti-bezumiya.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/issledovanie-o-prirode-i-prichinah.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Исследование о природе и причинах богатства народов</h5>
+																				<p class="card-text">Адам Смит</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/issledovanie-o-prirode-i-prichinah.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/ono.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Оно</h5>
+																				<p class="card-text">Стивен Кинг</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/ono.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/truzheniki-morya.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Труженики моря</h5>
+																				<p class="card-text">Виктор Гюго</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/truzheniki-morya.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/piknik-na-obochine.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Пикник на обочине</h5>
+																				<p class="card-text">Аркадий и Борис Стругацкие</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/piknik-na-obochine.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/voskresenie.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Воскресение</h5>
+																				<p class="card-text">Л. Н. Толстой</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/voskresenie.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/graph-monte-kristo.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Граф Монте-Кристо</h5>
+																				<p class="card-text">Александр Дюма</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/graph-monte-kristo.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/petr-perviy.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Пётр Первый</h5>
+																				<p class="card-text">А. Н. Толстой</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/petr-perviy.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+									</div>
+							<div id="2023" class="container text-center fw-light my-5">
+								<h2 class="my-2 fw-light text-muted">2023</h2>
+							</div>
+								<div class="container text-center my-5">
+									<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-5">
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/pisheblok.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Пищеблок</h5>
+																				<p class="card-text">Алексей Иванов</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/pisheblok.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/ten-gori.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Тень горы</h5>
+																				<p class="card-text">Грегори Дэвид Робертс</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/ten-gori.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/shantaram.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Шантарам</h5>
+																				<p class="card-text">Грегори Дэвид Робертс</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/shantaram.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/puteshestvie-v-elevsin.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Путешествие в Элевсин</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/puteshestvie-v-elevsin.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/vprok.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Впрок</h5>
+																				<p class="card-text">Андрей Платонов</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/vprok.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/chevengur.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Чевенгур</h5>
+																				<p class="card-text">Андрей Платонов</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/chevengur.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/pohoronite-menya.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Похороните меня за плинтусом</h5>
+																				<p class="card-text">Павел Санаев</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/pohoronite-menya.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/nad-kukushkinim-gnezdom.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Над кукушкиным гнездом</h5>
+																				<p class="card-text">Кен Кизи</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/nad-kukushkinim-gnezdom.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/perishkin-fizika.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Физика. 8 класс</h5>
+																				<p class="card-text">А. В. Перышкин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/perishkin-fizika.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/chisla.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Числа</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/chisla.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/lolita.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Лолита</h5>
+																				<p class="card-text">Владимир Набоков</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/lolita.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/billi-milligan.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Таинственная история Билли Миллигана</h5>
+																				<p class="card-text">Дэниел Киз</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/billi-milligan.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/cveti-dlya-eldzhernona.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Цветы для Элджернона</h5>
+																				<p class="card-text">Дэниел Киз</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/cveti-dlya-eldzhernona.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/robinzon-kruzo.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Жизнь и удивительные приключения Робинзона Крузо</h5>
+																				<p class="card-text">Даниэль Дефо</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/robinzon-kruzo.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/shagrenevaya-kozha.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Шагреневая кожа</h5>
+																				<p class="card-text">Оноре де Бальзак</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/shagrenevaya-kozha.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/tobol2.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Тобол. Том 2</h5>
+																				<p class="card-text">Алексей Иванов</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/tobol2.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/tobol1.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Тобол. Том 1</h5>
+																				<p class="card-text">Алексей Иванов</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/tobol1.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/bitie-i-vremya.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Бытие и время</h5>
+																				<p class="card-text">Мартин Хайдеггер</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/bitie-i-vremya.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/cherniy-lebed.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Чёрный лебедь. Под знаком непредсказуемости</h5>
+																				<p class="card-text">Нассим Николас Талеб</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/cherniy-lebed.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/lukreciy.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">О природе вещей</h5>
+																				<p class="card-text">Тит Лукреций Кар</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/lukreciy.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/heminguey-izbrannoe.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Избранное</h5>
+																				<p class="card-text">Эрнест Хемингуэй</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/heminguey-izbrannoe.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/volter.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Кандид простодушный и другие философские повести</h5>
+																				<p class="card-text">Вольтер</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/volter.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/pesn-o-nibelungah.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Песнь о нибелунгах</h5>
+																				<p class="card-text"></p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/pesn-o-nibelungah.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/starshaya-edda.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Старшая Эдда</h5>
+																				<p class="card-text"></p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/starshaya-edda.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/beowolf.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Беовульф</h5>
+																				<p class="card-text"></p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/beowolf.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/antihrist.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Антихрист. Ecce Homo. Сумерки идолов</h5>
+																				<p class="card-text">Фридрих Ницше</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/antihrist.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/solyaris.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Солярис</h5>
+																				<p class="card-text">Станислав Лем</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/solyaris.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/torzhestvo-metafiziki.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Торжество метафизики</h5>
+																				<p class="card-text">Эдуард Лимонов</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/torzhestvo-metafiziki.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/dnevnik-neudachnika.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Дневник неудачника</h5>
+																				<p class="card-text">Эдуард Лимонов</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/dnevnik-neudachnika.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/svyashennie-monstri.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Священные монстры</h5>
+																				<p class="card-text">Эдуард Лимонов</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/svyashennie-monstri.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/tayniy-dnevnik-lori-palmer.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Тайный дневник Лоры Палмер</h5>
+																				<p class="card-text">Дженнифер Линч</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/tayniy-dnevnik-lori-palmer.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/mark-avreliy.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Наедине с собой. Размышления</h5>
+																				<p class="card-text">Марк Аврелий</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/mark-avreliy.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/don-kihot.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Хитроумный идальго Дон Кихот Ламанчский</h5>
+																				<p class="card-text">Мигель де Сервантес Сааведра</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/don-kihot.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/krizis-sovremennogo-mira.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Кризис современного мира</h5>
+																				<p class="card-text">Рене Генон</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/krizis-sovremennogo-mira.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/siyanie.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Сияние</h5>
+																				<p class="card-text">Стивен Кинг</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/siyanie.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/istoriya-veri.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">История веры и религиозных идей: от каменного века до элевсинских мистерий</h5>
+																				<p class="card-text">Мирча Элиаде</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/istoriya-veri.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/portret-doriana-greya.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Портрет Дориана Грея</h5>
+																				<p class="card-text">Оскар Уайльд</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/portret-doriana-greya.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/vozvrashenniy-rai.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Возвращённый рай</h5>
+																				<p class="card-text">Джон Мильтон</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/vozvrashenniy-rai.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/poteryanniy-rai.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Потерянный рай</h5>
+																				<p class="card-text">Джон Мильтон</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/poteryanniy-rai.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/siddhartha.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Сиддхартха. Паломничество в страну Востока</h5>
+																				<p class="card-text">Герман Гессе</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/siddhartha.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/stepnoy-volk.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Степной волк</h5>
+																				<p class="card-text">Герман Гессе</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/stepnoy-volk.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/kurortnik.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Курортник</h5>
+																				<p class="card-text">Герман Гессе</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/kurortnik.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/volya-k-vlasti.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Воля к власти</h5>
+																				<p class="card-text">Фридрих Ницше</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/volya-k-vlasti.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/svyashennaya-kniga-oborotnya.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Священная книга оборотня</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/svyashennaya-kniga-oborotnya.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/po-tu-storonu-dobra-i-zla.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">По ту сторону добра и зла. К генеалогии морали</h5>
+																				<p class="card-text">Фридрих Ницше</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/po-tu-storonu-dobra-i-zla.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/uliss.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Улисс</h5>
+																				<p class="card-text">Джеймс Джойс</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/uliss.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/mi.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Мы</h5>
+																				<p class="card-text">Е. И. Замятин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/mi.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/kolibel-dlya-koshki.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Колыбель для кошки</h5>
+																				<p class="card-text">Курт Воннегут</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/kolibel-dlya-koshki.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/russkaya-voyna.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Русская война</h5>
+																				<p class="card-text">Александр Дугин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/russkaya-voyna.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/ananasnaya-voda.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Ананасная вода для прекрасной дамы</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/ananasnaya-voda.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/iskusstvo-legkih-kasaniy.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Искусство лёгких касаний</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/iskusstvo-legkih-kasaniy.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/gamlet-korol-lir.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Гамлет, принц Датский. Король Лир</h5>
+																				<p class="card-text">Уильям Шекспир</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/gamlet-korol-lir.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/dveri-vospriyatiya.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Двери восприятия. Рай и ад</h5>
+																				<p class="card-text">Олдос Хаксли</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/dveri-vospriyatiya.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/o-divniy-noviy-mir.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">О дивный новый мир</h5>
+																				<p class="card-text">Олдос Хаксли</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/o-divniy-noviy-mir.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/chelovecheskoe-slishkom.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Человеческое, слишком человеческое</h5>
+																				<p class="card-text">Фридрих Ницше</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/chelovecheskoe-slishkom.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/smert-v-kredit.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Смерть в кредит</h5>
+																				<p class="card-text">Луи-Фердинанд Селин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/smert-v-kredit.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/norma.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Норма</h5>
+																				<p class="card-text">Владимир Сорокин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/norma.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/sladost-gub-tvoih-nezhnih.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Сладость губ твоих нежных</h5>
+																				<p class="card-text">Илья Масодов</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/sladost-gub-tvoih-nezhnih.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/teplo-tvoih-ruk.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Тепло твоих рук</h5>
+																				<p class="card-text">Илья Масодов</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/teplo-tvoih-ruk.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/mrak-tvoih-glaz.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Мрак твоих глаз</h5>
+																				<p class="card-text">Илья Масодов</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/mrak-tvoih-glaz.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/gosudarstvo.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Государство</h5>
+																				<p class="card-text">Платон</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/gosudarstvo.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/platon-izbrannoe.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Диалоги</h5>
+																				<p class="card-text">Платон</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/platon-izbrannoe.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/dialogi-apologiya.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Диалоги. Апология Сократа</h5>
+																				<p class="card-text">Платон</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/dialogi-apologiya.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/puteshestvie-na-krai-nochi.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Путешествие на край ночи</h5>
+																				<p class="card-text">Луи-Фердинанд Селин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/puteshestvie-na-krai-nochi.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/otec-nashih-otcov.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Отец наших отцов</h5>
+																				<p class="card-text">Бернар Вербер</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/otec-nashih-otcov.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/geliopol.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Гелиополь</h5>
+																				<p class="card-text">Эрнст Юнгер</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/geliopol.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/marionetki-mirozdaniya.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Марионетки мироздания. Авторский сборник</h5>
+																				<p class="card-text">Филип К. Дик</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/marionetki-mirozdaniya.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/v-stalnih-grozah.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">В стальных грозах</h5>
+																				<p class="card-text">Эрнст Юнгер</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/v-stalnih-grozah.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/otverzhennie.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Отверженные</h5>
+																				<p class="card-text">Виктор Гюго</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/otverzhennie.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+										</div>
+								<div id="2022" class="container text-center fw-light my-5">
+									<h2 class="my-2 fw-light text-muted">2022</h2>
+								</div>
+									<div class="container text-center my-5">
+										<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-5">
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/nekotorie-ne-popadut-v-ad.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Некоторые не попадут в ад</h5>
+																				<p class="card-text">Захар Прилепин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/nekotorie-ne-popadut-v-ad.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/manaraga.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Манарага</h5>
+																				<p class="card-text">Владимир Сорокин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/manaraga.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/shlem-uzhasa.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Шлем ужаса: Креатифф о Тесее и Минотавре</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/shlem-uzhasa.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/master-i-margarita.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Мастер и Маргарита</h5>
+																				<p class="card-text">Михаил Булгаков</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/master-i-margarita.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/kgbt.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">KGBT+</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/kgbt.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/lunniy-park.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Лунный парк</h5>
+																				<p class="card-text">Брет Истон Эллис</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/lunniy-park.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/starik-i-more.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Старик и море</h5>
+																				<p class="card-text">Эрнест Хемингуэй</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/starik-i-more.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/magiya-run.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Магия рун</h5>
+																				<p class="card-text">Кеннет Медоуз</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/magiya-run.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/shamanizm.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Шаманизм. Архаические техники экстаза</h5>
+																				<p class="card-text">Мирча Элиаде</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/shamanizm.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/igrunka.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Игрунка в ночи</h5>
+																				<p class="card-text">Харуки Мураками</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/igrunka.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/ecstazi.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Экстази</h5>
+																				<p class="card-text">Ирвин Уэлш</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/ecstazi.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/kratkaya-istoriya-vremeni.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Краткая история времени: от Большого взрыва до чёрных дыр</h5>
+																				<p class="card-text">Стивен Хокинг</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/kratkaya-istoriya-vremeni.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/karnegi-kak-perestat.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Как перестать беспокоиться и начать жить</h5>
+																				<p class="card-text">Дейл Карнеги</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/karnegi-kak-perestat.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/karnegi-kak-zavoevat.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Как завоевывать друзей и оказывать влияние на людей.</h5>
+																				<p class="card-text">Дейл Карнеги</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/karnegi-kak-zavoevat.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/karnegi-kak-virabotat.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Как выработать уверенность в себе и влиять на людей, выступая публично.</h5>
+																				<p class="card-text">Дейл Карнеги</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/karnegi-kak-virabotat.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/gosudar.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Государь</h5>
+																				<p class="card-text">Никколо Макиавелли</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/gosudar.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/podrostok.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Подросток</h5>
+																				<p class="card-text">Ф. М. Достоевский</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/podrostok.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/zheltaya-strela.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Жёлтая стрела</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/zheltaya-strela.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/makedonskaya-kritika.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Македонская критика французской мысли</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/makedonskaya-kritika.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/koshmari-aista-marabu.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Кошмары Аиста Марабу</h5>
+																				<p class="card-text">Ирвин Уэлш</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/koshmari-aista-marabu.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/idiot.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Идиот</h5>
+																				<p class="card-text">Ф. М. Достоевский</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/idiot.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/anna-karenina.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Анна Каренина</h5>
+																				<p class="card-text">Л. Н. Толстой</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/anna-karenina.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/valis.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Валис</h5>
+																				<p class="card-text">Филип К. Дик</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/valis.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/voina-i-mir.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Война и мир</h5>
+																				<p class="card-text">Л. Н. Толстой</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/voina-i-mir.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/taina.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Тайна</h5>
+																				<p class="card-text">Ронда Берн</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/taina.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/geroy-nashego-vremeni.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Герой нашего времени</h5>
+																				<p class="card-text">М. Ю. Лермонтов</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/geroy-nashego-vremeni.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/roza-mira.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Роза Мира</h5>
+																				<p class="card-text">Даниил Андреев</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/roza-mira.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/mertvie-dushi.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Мёртвые души</h5>
+																				<p class="card-text">Н. В. Гоголь</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/mertvie-dushi.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/gore-ot-uma.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Горе от ума</h5>
+																				<p class="card-text">А. С. Грибоедов</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/gore-ot-uma.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/nad-propastyu-vo-rzhi.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Над пропастью во ржи</h5>
+																				<p class="card-text">Дж. Д. Сэлинджер</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/nad-propastyu-vo-rzhi.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/nepobedimoe-solnce.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Непобедимое Солнце</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/nepobedimoe-solnce.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/zemlya.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Земля</h5>
+																				<p class="card-text">Михаил Елизаров</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/zemlya.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/tainie-vidi-na-goru-fudzi.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Тайные виды на гору Фудзи</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/tainie-vidi-na-goru-fudzi.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/logiko-philos-traktak.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Логико-философский трактат</h5>
+																				<p class="card-text">Людвиг Витгенштейн</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/logiko-philos-traktak.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/toshnota.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Тошнота</h5>
+																				<p class="card-text">Жан Поль Сартр</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/toshnota.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/transhumanism.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">TRANSHUMANISM INC.</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/transhumanism.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/lyubov-k-trem-cukerbrinam.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Любовь к трём цукербринам</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/lyubov-k-trem-cukerbrinam.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/empire-v.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Empire V</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/empire-v.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/burattini.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Бураттини</h5>
+																				<p class="card-text">Михаил Елизаров</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/burattini.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/tibetskaya-kniga-mertvih.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Бардо Тхёдол (Тибетская Книга мёртвых)</h5>
+																				<p class="card-text"></p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/tibetskaya-kniga-mertvih.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/generation-p.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Generaion П</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/generation-p.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/princ-gosplana.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Принц Госплана</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/princ-gosplana.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/zatvornik-i-shestipaliy.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Затворник и Шестипалый</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/zatvornik-i-shestipaliy.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/chelovek-v-visokom-zamke.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Человек в Высоком замке</h5>
+																				<p class="card-text">Филип К. Дик</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/chelovek-v-visokom-zamke.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/bibliotekar.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Библиотекарь</h5>
+																				<p class="card-text">Михаил Елизаров</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/bibliotekar.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/omon-ra.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Омон Ра</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/omon-ra.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/snuff.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">S.N.U.F.F.</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/snuff.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/upanishadi.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Упанишады. Практика постижения истинной реальности</h5>
+																				<p class="card-text">Бхагаван Шри Сатья Саи Баба</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/upanishadi.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/oblomov.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Обломов</h5>
+																				<p class="card-text">И. А. Гончаров</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/oblomov.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/mechtayut-li-androidi.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Мечтают ли андроиды об электроовцах?</h5>
+																				<p class="card-text">Филип К. Дик</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/mechtayut-li-androidi.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/multiki.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Мультики</h5>
+																				<p class="card-text">Михаил Елизаров</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/multiki.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/dostoevskiy-i-nicshe.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Достоевский и Ницше</h5>
+																				<p class="card-text">Лев Шестов</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/dostoevskiy-i-nicshe.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/igra-v-biser.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Игра в бисер</h5>
+																				<p class="card-text">Герман Гессе</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/igra-v-biser.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/mir-kak-volya-i-predstavlenie.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Мир как воля и представление</h5>
+																				<p class="card-text">Артур Шопенгауэр</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/mir-kak-volya-i-predstavlenie.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/phenomenologiya-duha.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Феноменология духа</h5>
+																				<p class="card-text">Георг Вильгельм Фридрих Гегель</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/phenomenologiya-duha.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/zamok-novelli.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Замок. Новеллы и притчи. Письмо отцу. Письма Милене</h5>
+																				<p class="card-text">Франц Кафка</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/zamok-novelli.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/zhid.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Имморалист. Пасторальная симфония. Фальшивомонетчики. Тесей</h5>
+																				<p class="card-text">Андре Жид</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/zhid.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/kamyu-izbrannoe.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Избранное</h5>
+																				<p class="card-text">Альбер Камю</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/kamyu-izbrannoe.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/kamyu.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Посторонний. Чума. Падение. Калигула. Миф о Сизифе</h5>
+																				<p class="card-text">Альбер Камю</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/kamyu.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/bairon-don-zhuan.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Паломничество Чайльд-Гарольда. Дон-Жуан</h5>
+																				<p class="card-text">Джордж Гордон Байрон</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/bairon-don-zhuan.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/ubik.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Убик</h5>
+																				<p class="card-text">Филип К. Дик</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/ubik.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/na-zapadnov-fronte-bez-peremen.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">На западном фронте без перемен</h5>
+																				<p class="card-text">Эрих Мария Ремарк</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/na-zapadnov-fronte-bez-peremen.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/gelveciy.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Об уме</h5>
+																				<p class="card-text">Клод Гельвеций</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/gelveciy.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/rozhdenie-tragedii.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Рождение трагедии</h5>
+																				<p class="card-text">Фридрих Ницше</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/rozhdenie-tragedii.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/tri-tovarisha.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Три товарища</h5>
+																				<p class="card-text">Эрих Мария Ремарк</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/tri-tovarisha.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/bozhestvennaya-komediya.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Божественная комедия</h5>
+																				<p class="card-text">Данте Алигьери</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/bozhestvennaya-komediya.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/smotritel2.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Смотритель. Книга 2</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/books/smotritel2.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/smotritel1.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Смотритель. Книга 1</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/smotritel1.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/phaust.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Фауст</h5>
+																				<p class="card-text">Иоганн Вольфганг Гете</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/phaust.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+										</div>
+							<div id="2021" class="container text-center fw-light my-5">
+								<h2 class="my-2 fw-light text-muted">2021</h2>
+							</div>
+								<div class="container text-center my-5">
+									<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-5">
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/sofokl.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Трагедии</h5>
+																				<p class="card-text">Софокл</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/sofokl.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/iliada.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Илиада</h5>
+																				<p class="card-text">Гомер</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/iliada.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/kritika-chistogo-razuma.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Критика чистого разума</h5>
+																				<p class="card-text">Иммануил Кант</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/kritika-chistogo-razuma.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/o-chelovecheskoy-prirode.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">О человеческой природе</h5>
+																				<p class="card-text">Дэвид Юм</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/o-chelovecheskoy-prirode.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/anatomiya-cns.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Анатомия центральной нервной системы</h5>
+																				<p class="card-text">И. В. Гайворонский, Г. И. Ничипорук</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/anatomiya-cns.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/luriya-kekcii.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Лекции по общей психологии</h5>
+																				<p class="card-text">А. Р. Лурия</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/luriya-kekcii.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/kak-upravlyat-soboi.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Как управлять собой и другими с помощью НЛП</h5>
+																				<p class="card-text">Анвар Бакиров</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/kak-upravlyat-soboi.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/iphuck-10.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">iPhuck 10</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/iphuck-10.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/lampa-mafusaila.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Лампа Мафусаила</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/lampa-mafusaila.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/zhizn-nasekomih.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Жизнь насекомых</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/zhizn-nasekomih.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/besi.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Бесы</h5>
+																				<p class="card-text">Ф. М. Достоевский</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/besi.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/selo-stepanchikovo.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Село Степанчиково и его обитатели. Игрок. Записки из подполья</h5>
+																				<p class="card-text">Ф. М. Достоевский</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/selo-stepanchikovo.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/vershitel-realnosti.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Вершитель реальности</h5>
+																				<p class="card-text">Вадим Зеланд</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/vershitel-realnosti.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/tarzan.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Тарзан - приёмыш обезьян. Возвращение Тарзана в джунгли</h5>
+																				<p class="card-text">Эдгар Райс Берроуз</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/tarzan.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/cherniy-obelisk.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Чёрный обелиск</h5>
+																				<p class="card-text">Эрих Мария Ремарк</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/cherniy-obelisk.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/sudba-rossii.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Судьба России. Опыты по психологии войны и национальности</h5>
+																				<p class="card-text">Н. А. Бердяев</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/sudba-rossii.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/devyanosto-tretiy-god.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Девяносто третий год</h5>
+																				<p class="card-text">Виктор Гюго</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/devyanosto-tretiy-god.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/chelovek-kotoriy-smeetsya.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Человек, который смеётся</h5>
+																				<p class="card-text">Виктор Гюго</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/chelovek-kotoriy-smeetsya.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/unesennie-vetrom.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Унесённые ветром</h5>
+																				<p class="card-text">Маргарет Митчелл</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/unesennie-vetrom.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/lunniy-kamen.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Лунный камень</h5>
+																				<p class="card-text">Уилки Коллинз</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/lunniy-kamen.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/haggard.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Копи царя Соломона. Прекрасная Маргарет</h5>
+																				<p class="card-text">Генри Райдер Хаггард</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/haggard.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/vernutsya-v-rossiyu.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Вернуться в Россию</h5>
+																				<p class="card-text">Л. П. Решетников</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/vernutsya-v-rossiyu.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/imya-moe-legion.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Имя моё легион</h5>
+																				<p class="card-text">Григорий Климов</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/imya-moe-legion.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/knyaz-mira-sego.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Князь мира сего</h5>
+																				<p class="card-text">Григорий Климов</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/knyaz-mira-sego.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/pesn-pobeditelya.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Песнь победителя</h5>
+																				<p class="card-text">Григорий Климов</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/pesn-pobeditelya.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/dvenadchat-stulev.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Двенадцать стульев. Золотой телёнок</h5>
+																				<p class="card-text">Илья Ильф, Евгений Петров</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/dvenadchat-stulev.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/arhipelag-gulag.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Архипелаг ГУЛАГ</h5>
+																				<p class="card-text">Алесандр Солженицын</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/arhipelag-gulag.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/kitai-stranici-proshlogo.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Китай: Страницы прошлого</h5>
+																				<p class="card-text">В. Я. Сидихменов</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/kitai-stranici-proshlogo.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/bhagavad-gita.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Бхагават-гита как она есть</h5>
+																				<p class="card-text">Его Божественная Милость А. Ч. Бхактиведанта Свами Прабхупада</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/bhagavad-gita.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/phantomas.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Фантомас/Приговорённый умирает в пять</h5>
+																				<p class="card-text">Пьер Сувестр и Марсель Аллен/Станислас-Андре Стиман</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/phantomas.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/bulgarin.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Мазепа. Иван Иванович Выжигин</h5>
+																				<p class="card-text">Фаддей Булгарин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/bulgarin.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/zhizn-bez-granic.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Жизнь без границ</h5>
+																				<p class="card-text">Ник Вуйчич</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/zhizn-bez-granic.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/prodavec-vozduha.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Продавец воздуха</h5>
+																				<p class="card-text">Александр Беляев</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/prodavec-vozduha.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/ostrov-pogibshih-korabley.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Остров Погибших Кораблей</h5>
+																				<p class="card-text">Александр Беляев</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/ostrov-pogibshih-korabley.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/zvezda-kec.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Звезда КЭЦ</h5>
+																				<p class="card-text">Александр Беляев</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/zvezda-kec.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/chelovek-amphibia.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Человек-амфибия</h5>
+																				<p class="card-text">Александр Беляев</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/chelovek-amphibia.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/romeo-i-dzhuletta.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Ромео и Джульетта</h5>
+																				<p class="card-text">Уильям Шекспир</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/romeo-i-dzhuletta.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/zapiski-iz-mertvogo-doma.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Записки из Мёртвого дома. Рассказы</h5>
+																				<p class="card-text">Ф. М. Достоевский</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/zapiski-iz-mertvogo-doma.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/dekameron.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Декамерон</h5>
+																				<p class="card-text">Джованни Боккаччо</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/dekameron.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/bratya-karamazovi.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Братья Карамазовы</h5>
+																				<p class="card-text">Ф. М. Достоевский</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/bratya-karamazovi.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/vinogradov.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Повесть о братьях Тургеневых. Осуждение Паганини</h5>
+																				<p class="card-text">А. К. Виноградов</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/vinogradov.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/dzhud-nezametniy.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Джуд Незаметный</h5>
+																				<p class="card-text">Т. Гарди</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/dzhud-nezametniy.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/moll-flenders.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Молль Флендерс</h5>
+																				<p class="card-text">Даниель Дефо</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/moll-flenders.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/maria-stuart.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Мария Стюарт. Жозеф Фуше</h5>
+																				<p class="card-text">Стефан Цвейг</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/maria-stuart.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/samopoznanie.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Самопознание. Опыт философской автобиографии</h5>
+																				<p class="card-text">Н. А. Бердяев</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/samopoznanie.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/kamo-gryadeshi.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Камо Грядеши</h5>
+																				<p class="card-text">Генрик Сенкевич</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/kamo-gryadeshi.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/batman-apollo.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Бэтман Аполло</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/batman-apollo.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/smert-ivana-ilicha.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Смерть Ивана Ильича</h5>
+																				<p class="card-text">Л. Н. Толстой</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/smert-ivana-ilicha.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/frankenshtein.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Франкенштейн, или Современный Прометей</h5>
+																				<p class="card-text">Мэри Шелли</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/frankenshtein.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/t.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Т</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/t.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/po-kom-zvonit-kolokol.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">По ком звонит колокол</h5>
+																				<p class="card-text">Эрнест Хемингуэй</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/po-kom-zvonit-kolokol.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/yuvenilnoe-more.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Котлован. Ювенильное море</h5>
+																				<p class="card-text">Андрей Платонов</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/yuvenilnoe-more.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/chapaev-i-pustota.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Чапаев и Пустота</h5>
+																				<p class="card-text">Виктор Пелевин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/chapaev-i-pustota.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/morphiy.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Морфий</h5>
+																				<p class="card-text">М. А. Булгаков</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/morphiy.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/belaya-gvardiya.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Белая гвардия</h5>
+																				<p class="card-text">М. А. Булгаков</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/belaya-gvardiya.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/tak-govoril-zaratustra.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Так говорил Заратустра</h5>
+																				<p class="card-text">Фридрих Ницше</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/tak-govoril-zaratustra.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+										</div>
+							<div id="2020" class="container text-center fw-light my-5">
+								<h2 class="my-2 fw-light text-muted">2020</h2>
+							</div>
+								<div class="container text-center my-5">
+									<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-5">
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/gogol.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Собрание сочинений</h5>
+																				<p class="card-text">Н. В. Гоголь</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/gogol.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/gorkiy-mat.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Мать</h5>
+																				<p class="card-text">Максим Горький</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/gorkiy-mat.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/obitel.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Обитель</h5>
+																				<p class="card-text">Захар Прилепин</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/obitel.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/unizhennie-i-osc.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Униженные и оскорблённые</h5>
+																				<p class="card-text">Ф. М. Достоевский</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/unizhennie-i-osc.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/sto-let-odinochestva.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Сто лет одиночества</h5>
+																				<p class="card-text">Габриэль Гарсиа Маркес</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/sto-let-odinochestva.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/strugackie-hromaya-sudba.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Хромая судьба. Хищные вещи века</h5>
+																				<p class="card-text">Аркадий и Борис Стругацкие</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/strugackie-hromaya-sudba.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/istoria-zap-fil2.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">История западной философии. Том 2</h5>
+																				<p class="card-text">Бертран Рассел</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/istoria-zap-fil2.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/istoria-zap-fil1.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">История западной философии. Том 1</h5>
+																				<p class="card-text">Бертран Рассел</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/istoria-zap-fil1.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/voina-mirov.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Война миров</h5>
+																				<p class="card-text">Герберт Уэллс</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/voina-mirov.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/ostrov-doktora-moro.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Остров доктора Моро</h5>
+																				<p class="card-text">Герберт Уэллс</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/ostrov-doktora-moro.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/chelovek-nev.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Человек-невидимка. Машина времени</h5>
+																				<p class="card-text">Герберт Уэллс</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/chelovek-nev.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/krasniy-smeh.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Красный смех. Сборник</h5>
+																				<p class="card-text">Л. Н. Андреев</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/krasniy-smeh.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/ellinisticheskiy-mir-i-rim.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Эллинистический мир и Рим</h5>
+																				<p class="card-text">В. И. Кащеев</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/ellinisticheskiy-mir-i-rim.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/chuzhoe-lico.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Чужое лицо</h5>
+																				<p class="card-text">Кобо Абэ</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/chuzhoe-lico.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/triumphalnaya-arka.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Триумфальная арка</h5>
+																				<p class="card-text">Эрих Мария Ремарк</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/triumphalnaya-arka.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/porozhdenie-tmi-nochnoi.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Порождение тьмы ночной</h5>
+																				<p class="card-text">Курт Воннегут</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/porozhdenie-tmi-nochnoi.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/garantiya-bezopasnosti.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Гарантия безопасности</h5>
+																				<p class="card-text">Юджин Бердик, Харви Уилер</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/garantiya-bezopasnosti.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/homo-deus.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Homo Deus. Краткая история будущего</h5>
+																				<p class="card-text">Юваль Ной Харрари</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/homo-deus.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/sartr-stena.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Стена. Сборник рассказов</h5>
+																				<p class="card-text">Жан Поль Сартр</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/sartr-stena.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/okonchatelniy-diagnoz.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Окончательный диагноз</h5>
+																				<p class="card-text">А. Хейли</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/okonchatelniy-diagnoz.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/sapiens.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Sapiens. Краткая история человечества</h5>
+																				<p class="card-text">Юваль Ной Харрари</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/sapiens.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/dekart-rassuzhdeniya.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Рассуждения о методе</h5>
+																				<p class="card-text">Рене Декарт</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/dekart-rassuzhdeniya.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/fromm-dusha.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Душа человека. Сборник</h5>
+																				<p class="card-text">Эриф Фромм</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/fromm-dusha.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/sin-ribaka.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Сын рыбака</h5>
+																				<p class="card-text">Вилис Лацис</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/sin-ribaka.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/martin-iden.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Мартин Иден</h5>
+																				<p class="card-text">Джек Лондон</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/martin-iden.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/poyuhie-v-ternovnikah.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Поющие в терновнике</h5>
+																				<p class="card-text">Колин Маккалоу</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/poyuhie-v-ternovnikah.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+											<div class="col">
+														<div class="card">
+																<img class="card-img-top" src="./src/pictures/books/compressed/krasnoe-i-chernoe.jpg" alt="Card image cap" width="100">
+																		<div class="card-body">
+																				<h5 class="card-title">Красное и чёрное</h5>
+																				<p class="card-text">Стендаль</p>
+																				<a href="#" class="btn btn-primary zoom-link" loading="lazy" data-img="./src/pictures/books/krasnoe-i-chernoe.jpg">Увеличить</a>
+																		</div>
+														</div>
+											</div>
+                	</div>
+            </div>
+			<script src="./src/randomCard.js"></script>
+			<script src="./src/searchInput.js"></script>
+        </body>
+</html>

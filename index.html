@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Денис Кин</title>
+        <link 
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+            rel="stylesheet" 
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+            crossorigin="anonymous"
+        />
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" 
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" 
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+            crossorigin="anonymous"></script>
+            <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+            <link rel="manifest" href="/site.webmanifest">
+         <link rel="stylesheet" href="./src/index.css">
+    </head>
+        <body> 
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <nav class="container navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="./index.html"><img src="./src/pictures/logo.png" alt="Logo" width="60"></a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link active" href="./index.html">Главная<span class="sr-only"></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./biblio.html">Библиотека</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./contacts.html">Контакты</a>
+                        </li>
+                        </ul>
+                    </div>
+                </nav>
+            </nav>
+            <div class="container text-center my-3">
+                <h1 class="my-4 fw-light">Денис Кин</h1>
+                <script src = './src/confirm.js'></script>
+                <div class="row">
+                    <div class="col-lg-6 mx-auto">
+                        <img class="rounded-img" src = './src/pictures/avatar.jpg' alt="Denis" width="400" height="400">
+                        <h1 class="fw-light">Фронтенд-разработчик</h1>
+                        <p class="lead text-muted">
+                            HTML, CSS, JavaScript
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="container text-center text-muted my-4">
+                <h2 class="fw-light">Cможете ли вы ответить на вопрос?</h2> 
+                <button id="questionJs" class="btn btn-warning my-2" onclick="questionPromptFunction()">Вопрос</button>
+            </div>
+      <div id="customPrompt">
+        <div id="promptBox">
+          <div style="font-weight:600;font-size:18px;margin-bottom:10px;color:#333;">🌍 Земля плоская?</div>
+          <input id="promptInput" type="text">
+          <div style="margin-top:15px;">
+            <button id="cancelBtn">Отмена</button>
+            <button id="okBtn">OK</button>
+          </div>
+        </div>
+      </div>
+      <div id="customAlert">
+      <div id="miniAlert" class="mini-alert">
+        <div id="miniAlertText"></div>
+        <button id="miniAlertOk" class="mini-alert-ok">ОК</button>
+      </div>
+      <div id="alertBox">
+        <div id="alertMessage"></div>
+
+        <div id="alertAppleWrapper">
+          <img id="alertApple" src="./src/pictures/logo.png">
+        </div>
+          <button id="alertOk">ОК</button>
+        </div>
+      </div>
+    <script src="./src/questionPrompt.js"></script>
+  </body>
+</html>
