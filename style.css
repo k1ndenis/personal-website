@@ -1,0 +1,11 @@
+body {
+  background-color: darkgrey;
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#avatar {
+  border-radius: 66px;
+  box-shadow: 4px, 4px, 14px, rgba(0, 0, 0, 0);
+}
