@@ -23,8 +23,12 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="./src/index.css">
+    <script src="./src/scripts/background.js" defer></script>
   </head>
   <body>
+  <video autoplay muted loop class="video-background" id="videoBackground">
+    <source src="./src/apple-eating.webm" type="video/webm">
+  </video>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <nav class="container navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="./index.html"><img src="./src/pictures/avatar.jpg" alt="Logo" width="60"></a>
@@ -47,14 +51,15 @@
       </nav>
     </nav>
     <div class="container text-center my-3">
-      <h1 class="my-4 fw-light">Денис Кин</h1>
+      <h1 class="my-3 fw-light">Денис Кин</h1>
       <div class="row">
         <div class="col-lg-6 mx-auto">
           <img class="rounded-img" src = './src/pictures/avatar.jpg' alt="Денис Кин" width="400" height="400">
-          <h1 class="fw-light">Фронтенд-разработчик</h1>
+          <h1 class="my-2 fw-light">Фронтенд-разработчик</h1>
           <p class="lead text-muted">HTML, CSS, JavaScript</p>
         </div>
       </div>
     </div>
+    <div style="height: 1500px;"></div>
   </body>
 </html>
