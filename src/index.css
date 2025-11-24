@@ -1,36 +1,18 @@
 body {
   background-color: darkgrey;
-}
-
-.rounded-img {
-  width: 60%;
-  height: auto;
-  border-radius: 20%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  padding: 0.2em;
-  margin-top: 1em;
-  margin-bottom: 1em;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-}
-
-body {
   margin: 0;
-  height: 100%; /* Для демонстрации скролла */
+  height: 100%;
   transition: background-color 0.5s ease;
 }
 
-/* Видео как фон */
 .video-background {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Покрывает весь экран */
-  z-index: -1; /* Видео остается на заднем фоне */
-  opacity: 0; /* Изначально скрываем видео */
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0;
   transition: opacity 0.5s ease;
 }
