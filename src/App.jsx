@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import './App.css'
 import avatar from './pictures/avatar.jpg'
 import appleEating from './videos/apple-eating.webm'
 import NavBar from './NavBar.jsx/NavBar'
